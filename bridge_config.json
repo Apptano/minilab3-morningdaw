@@ -1,0 +1,379 @@
+{
+  "minilab_out": "Minilab3 MIDI",
+  "minilab_in": "Minilab3 MIDI",
+  "feedback_in": "MorningDAW Feedback",
+  "mcu_in": "MorningDAW MCU",
+  "ctl_out": "MorningDAW Ctl",
+  "send_connect": true,
+  "send_disconnect_on_exit": true,
+  "repaint_after_press_ms": 60,
+  "refresh_seconds": 0,
+  "log": "bridge.log",
+  "display": {
+    "enabled": true,
+    "line1": "MorningDAW",
+    "debounce_ms": 60
+  },
+  "leds": [
+    {
+      "name": "loop",
+      "led": "loop",
+      "on": "amber",
+      "off": "amber_half",
+      "mcu": "cycle",
+      "press": [
+        {
+          "type": "cc",
+          "channel": 1,
+          "number": 105
+        }
+      ]
+    },
+    {
+      "name": "play",
+      "led": "play",
+      "feedback": {
+        "type": "cc",
+        "channel": 1,
+        "number": 107
+      },
+      "on": "green",
+      "off": "green_half"
+    },
+    {
+      "name": "record",
+      "led": "rec",
+      "feedback": {
+        "type": "cc",
+        "channel": 1,
+        "number": 108
+      },
+      "on": "red",
+      "off": "red_half"
+    },
+    {
+      "name": "stop",
+      "led": "stop",
+      "invert_of": "play",
+      "press": [
+        {
+          "type": "cc",
+          "channel": 1,
+          "number": 106
+        }
+      ],
+      "on": "white",
+      "off": "white_half"
+    },
+    {
+      "name": "tap",
+      "led": "tap",
+      "press": [
+        {
+          "type": "cc",
+          "channel": 1,
+          "number": 109
+        }
+      ],
+      "on": "white_half",
+      "off": "white_half"
+    },
+    {
+      "name": "arm1",
+      "led": "pad1",
+      "feedback": {
+        "type": "note",
+        "channel": 10,
+        "number": 36
+      },
+      "on": [
+        8,
+        0,
+        0
+      ],
+      "off": "off",
+      "on_while": {
+        "record": "red"
+      },
+      "optimistic": "toggle",
+      "meter": 1,
+      "meter_color": "green"
+    },
+    {
+      "name": "arm2",
+      "led": "pad2",
+      "feedback": {
+        "type": "note",
+        "channel": 10,
+        "number": 37
+      },
+      "on": [
+        8,
+        0,
+        0
+      ],
+      "off": "off",
+      "on_while": {
+        "record": "red"
+      },
+      "optimistic": "toggle",
+      "meter": 2,
+      "meter_color": "green"
+    },
+    {
+      "name": "arm3",
+      "led": "pad3",
+      "feedback": {
+        "type": "note",
+        "channel": 10,
+        "number": 38
+      },
+      "on": [
+        8,
+        0,
+        0
+      ],
+      "off": "off",
+      "on_while": {
+        "record": "red"
+      },
+      "optimistic": "toggle",
+      "meter": 3,
+      "meter_color": "green"
+    },
+    {
+      "name": "arm4",
+      "led": "pad4",
+      "feedback": {
+        "type": "note",
+        "channel": 10,
+        "number": 39
+      },
+      "on": [
+        8,
+        0,
+        0
+      ],
+      "off": "off",
+      "on_while": {
+        "record": "red"
+      },
+      "optimistic": "toggle",
+      "meter": 4,
+      "meter_color": "green"
+    },
+    {
+      "name": "arm5",
+      "led": "pad5",
+      "feedback": {
+        "type": "note",
+        "channel": 10,
+        "number": 40
+      },
+      "on": [
+        8,
+        0,
+        0
+      ],
+      "off": "off",
+      "on_while": {
+        "record": "red"
+      },
+      "optimistic": "toggle",
+      "meter": 5,
+      "meter_color": "green"
+    },
+    {
+      "name": "arm6",
+      "led": "pad6",
+      "feedback": {
+        "type": "note",
+        "channel": 10,
+        "number": 41
+      },
+      "on": [
+        8,
+        0,
+        0
+      ],
+      "off": "off",
+      "on_while": {
+        "record": "red"
+      },
+      "optimistic": "toggle",
+      "meter": 6,
+      "meter_color": "green"
+    },
+    {
+      "name": "arm7",
+      "led": "pad7",
+      "feedback": {
+        "type": "note",
+        "channel": 10,
+        "number": 42
+      },
+      "on": [
+        8,
+        0,
+        0
+      ],
+      "off": "off",
+      "on_while": {
+        "record": "red"
+      },
+      "optimistic": "toggle",
+      "meter": 7,
+      "meter_color": "green"
+    },
+    {
+      "name": "arm8",
+      "led": "pad8",
+      "feedback": {
+        "type": "note",
+        "channel": 10,
+        "number": 43
+      },
+      "on": [
+        8,
+        0,
+        0
+      ],
+      "off": "off",
+      "on_while": {
+        "record": "red"
+      },
+      "optimistic": "toggle",
+      "meter": 8,
+      "meter_color": "green"
+    },
+    {
+      "name": "drum1",
+      "led": "padb1",
+      "press": [
+        {
+          "type": "note",
+          "channel": 10,
+          "number": 44
+        }
+      ],
+      "on": "white_half",
+      "off": "white_half"
+    },
+    {
+      "name": "drum2",
+      "led": "padb2",
+      "press": [
+        {
+          "type": "note",
+          "channel": 10,
+          "number": 45
+        }
+      ],
+      "on": "white_half",
+      "off": "white_half"
+    },
+    {
+      "name": "drum3",
+      "led": "padb3",
+      "press": [
+        {
+          "type": "note",
+          "channel": 10,
+          "number": 46
+        }
+      ],
+      "on": "white_half",
+      "off": "white_half"
+    },
+    {
+      "name": "drum4",
+      "led": "padb4",
+      "press": [
+        {
+          "type": "note",
+          "channel": 10,
+          "number": 47
+        }
+      ],
+      "on": "white_half",
+      "off": "white_half"
+    },
+    {
+      "name": "drum5",
+      "led": "padb5",
+      "press": [
+        {
+          "type": "note",
+          "channel": 10,
+          "number": 48
+        }
+      ],
+      "on": "white_half",
+      "off": "white_half"
+    },
+    {
+      "name": "drum6",
+      "led": "padb6",
+      "press": [
+        {
+          "type": "note",
+          "channel": 10,
+          "number": 49
+        }
+      ],
+      "on": "white_half",
+      "off": "white_half"
+    },
+    {
+      "name": "drum7",
+      "led": "padb7",
+      "press": [
+        {
+          "type": "note",
+          "channel": 10,
+          "number": 50
+        }
+      ],
+      "on": "white_half",
+      "off": "white_half"
+    },
+    {
+      "name": "drum8",
+      "led": "padb8",
+      "press": [
+        {
+          "type": "note",
+          "channel": 10,
+          "number": 51
+        }
+      ],
+      "on": "white_half",
+      "off": "white_half"
+    }
+  ],
+  "optimistic_timeout_ms": 1500,
+  "meter_threshold": 1,
+  "meter_hold_ms": 400,
+  "meter_mode": "level",
+  "meter_steps": 6,
+  "commands": [
+    {
+      "name": "track select (keyboard controls prev/next)",
+      "from": {
+        "type": "cc",
+        "channel": 1,
+        "number": 29
+      },
+      "relative": "offset",
+      "max_steps": 1,
+      "up": {
+        "channel": 1,
+        "cc": 113
+      },
+      "down": {
+        "channel": 1,
+        "cc": 112
+      }
+    }
+  ]
+}

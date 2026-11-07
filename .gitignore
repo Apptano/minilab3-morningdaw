@@ -1,0 +1,9 @@
+# runtime logs (contain local session data)
+*.log
+# Python
+__pycache__/
+*.pyc
+# backups / local
+*.bak*
+# local notes, not published
+README.pl.md
